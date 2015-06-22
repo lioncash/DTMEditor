@@ -42,6 +42,8 @@ namespace DTMEditor
 					MessageBox.Show(ioe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
+
+			ofd.Dispose();
 		}
 
 		private void frameListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -114,6 +116,8 @@ namespace DTMEditor
 					MessageBox.Show(ioe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
+
+			sfd.Dispose();
 		}
 
 		private void exitMenuItem_Click(object sender, EventArgs e)
