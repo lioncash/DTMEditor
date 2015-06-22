@@ -49,11 +49,11 @@
 			this.dpadDownCheckBox = new System.Windows.Forms.CheckBox();
 			this.dpadLeftCheckBox = new System.Windows.Forms.CheckBox();
 			this.dpadRightCheckBox = new System.Windows.Forms.CheckBox();
-			this.analogStickGroupBox = new System.Windows.Forms.GroupBox();
-			this.analogYAxisUpDown = new System.Windows.Forms.NumericUpDown();
-			this.analogXAxisUpDown = new System.Windows.Forms.NumericUpDown();
-			this.analogYAxisLabel = new System.Windows.Forms.Label();
-			this.analogXAxisLabel = new System.Windows.Forms.Label();
+			this.mainStickGroupBox = new System.Windows.Forms.GroupBox();
+			this.mainStickYAxisUpDown = new System.Windows.Forms.NumericUpDown();
+			this.mainStickXAxisUpDown = new System.Windows.Forms.NumericUpDown();
+			this.mainStickYAxisLabel = new System.Windows.Forms.Label();
+			this.mainStickXAxisLabel = new System.Windows.Forms.Label();
 			this.cstickGroupBox = new System.Windows.Forms.GroupBox();
 			this.cstickYAxisUpDown = new System.Windows.Forms.NumericUpDown();
 			this.cstickXAxisUpDown = new System.Windows.Forms.NumericUpDown();
@@ -69,9 +69,9 @@
 			this.buttonFlowLayout.SuspendLayout();
 			this.dpadGroupBox.SuspendLayout();
 			this.dpadFlowLayout.SuspendLayout();
-			this.analogStickGroupBox.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.analogYAxisUpDown)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.analogXAxisUpDown)).BeginInit();
+			this.mainStickGroupBox.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.mainStickYAxisUpDown)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.mainStickXAxisUpDown)).BeginInit();
 			this.cstickGroupBox.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.cstickYAxisUpDown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cstickXAxisUpDown)).BeginInit();
@@ -289,80 +289,80 @@
 			this.dpadRightCheckBox.Text = "Right";
 			this.dpadRightCheckBox.UseVisualStyleBackColor = true;
 			// 
-			// analogStickGroupBox
+			// mainStickGroupBox
 			// 
-			this.analogStickGroupBox.Controls.Add(this.analogYAxisUpDown);
-			this.analogStickGroupBox.Controls.Add(this.analogXAxisUpDown);
-			this.analogStickGroupBox.Controls.Add(this.analogYAxisLabel);
-			this.analogStickGroupBox.Controls.Add(this.analogXAxisLabel);
-			this.analogStickGroupBox.Location = new System.Drawing.Point(153, 131);
-			this.analogStickGroupBox.Name = "analogStickGroupBox";
-			this.analogStickGroupBox.Size = new System.Drawing.Size(156, 71);
-			this.analogStickGroupBox.TabIndex = 4;
-			this.analogStickGroupBox.TabStop = false;
-			this.analogStickGroupBox.Text = "Analog";
+			this.mainStickGroupBox.Controls.Add(this.mainStickYAxisUpDown);
+			this.mainStickGroupBox.Controls.Add(this.mainStickXAxisUpDown);
+			this.mainStickGroupBox.Controls.Add(this.mainStickYAxisLabel);
+			this.mainStickGroupBox.Controls.Add(this.mainStickXAxisLabel);
+			this.mainStickGroupBox.Location = new System.Drawing.Point(153, 131);
+			this.mainStickGroupBox.Name = "mainStickGroupBox";
+			this.mainStickGroupBox.Size = new System.Drawing.Size(156, 71);
+			this.mainStickGroupBox.TabIndex = 4;
+			this.mainStickGroupBox.TabStop = false;
+			this.mainStickGroupBox.Text = "Main Stick";
 			// 
-			// analogYAxisUpDown
+			// mainStickYAxisUpDown
 			// 
-			this.analogYAxisUpDown.Location = new System.Drawing.Point(45, 44);
-			this.analogYAxisUpDown.Maximum = new decimal(new int[] {
+			this.mainStickYAxisUpDown.Location = new System.Drawing.Point(45, 44);
+			this.mainStickYAxisUpDown.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
-			this.analogYAxisUpDown.Minimum = new decimal(new int[] {
+			this.mainStickYAxisUpDown.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-			this.analogYAxisUpDown.Name = "analogYAxisUpDown";
-			this.analogYAxisUpDown.Size = new System.Drawing.Size(105, 20);
-			this.analogYAxisUpDown.TabIndex = 7;
-			this.analogYAxisUpDown.Value = new decimal(new int[] {
+			this.mainStickYAxisUpDown.Name = "mainStickYAxisUpDown";
+			this.mainStickYAxisUpDown.Size = new System.Drawing.Size(105, 20);
+			this.mainStickYAxisUpDown.TabIndex = 7;
+			this.mainStickYAxisUpDown.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
 			// 
-			// analogXAxisUpDown
+			// mainStickXAxisUpDown
 			// 
-			this.analogXAxisUpDown.Location = new System.Drawing.Point(45, 17);
-			this.analogXAxisUpDown.Maximum = new decimal(new int[] {
+			this.mainStickXAxisUpDown.Location = new System.Drawing.Point(45, 17);
+			this.mainStickXAxisUpDown.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
-			this.analogXAxisUpDown.Minimum = new decimal(new int[] {
+			this.mainStickXAxisUpDown.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-			this.analogXAxisUpDown.Name = "analogXAxisUpDown";
-			this.analogXAxisUpDown.Size = new System.Drawing.Size(105, 20);
-			this.analogXAxisUpDown.TabIndex = 6;
-			this.analogXAxisUpDown.Value = new decimal(new int[] {
+			this.mainStickXAxisUpDown.Name = "mainStickXAxisUpDown";
+			this.mainStickXAxisUpDown.Size = new System.Drawing.Size(105, 20);
+			this.mainStickXAxisUpDown.TabIndex = 6;
+			this.mainStickXAxisUpDown.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
 			// 
-			// analogYAxisLabel
+			// mainStickYAxisLabel
 			// 
-			this.analogYAxisLabel.AutoSize = true;
-			this.analogYAxisLabel.Location = new System.Drawing.Point(7, 43);
-			this.analogYAxisLabel.Name = "analogYAxisLabel";
-			this.analogYAxisLabel.Size = new System.Drawing.Size(39, 13);
-			this.analogYAxisLabel.TabIndex = 2;
-			this.analogYAxisLabel.Text = "Y-Axis:";
+			this.mainStickYAxisLabel.AutoSize = true;
+			this.mainStickYAxisLabel.Location = new System.Drawing.Point(7, 43);
+			this.mainStickYAxisLabel.Name = "mainStickYAxisLabel";
+			this.mainStickYAxisLabel.Size = new System.Drawing.Size(39, 13);
+			this.mainStickYAxisLabel.TabIndex = 2;
+			this.mainStickYAxisLabel.Text = "Y-Axis:";
 			// 
-			// analogXAxisLabel
+			// mainStickXAxisLabel
 			// 
-			this.analogXAxisLabel.AutoSize = true;
-			this.analogXAxisLabel.Location = new System.Drawing.Point(7, 20);
-			this.analogXAxisLabel.Name = "analogXAxisLabel";
-			this.analogXAxisLabel.Size = new System.Drawing.Size(39, 13);
-			this.analogXAxisLabel.TabIndex = 0;
-			this.analogXAxisLabel.Text = "X-Axis:";
+			this.mainStickXAxisLabel.AutoSize = true;
+			this.mainStickXAxisLabel.Location = new System.Drawing.Point(7, 20);
+			this.mainStickXAxisLabel.Name = "mainStickXAxisLabel";
+			this.mainStickXAxisLabel.Size = new System.Drawing.Size(39, 13);
+			this.mainStickXAxisLabel.TabIndex = 0;
+			this.mainStickXAxisLabel.Text = "X-Axis:";
 			// 
 			// cstickGroupBox
 			// 
@@ -501,7 +501,7 @@
 			this.ClientSize = new System.Drawing.Size(494, 404);
 			this.Controls.Add(this.triggerGroupBox);
 			this.Controls.Add(this.cstickGroupBox);
-			this.Controls.Add(this.analogStickGroupBox);
+			this.Controls.Add(this.mainStickGroupBox);
 			this.Controls.Add(this.dpadGroupBox);
 			this.Controls.Add(this.buttonGroupBox);
 			this.Controls.Add(this.frameListBox);
@@ -517,10 +517,10 @@
 			this.dpadGroupBox.ResumeLayout(false);
 			this.dpadFlowLayout.ResumeLayout(false);
 			this.dpadFlowLayout.PerformLayout();
-			this.analogStickGroupBox.ResumeLayout(false);
-			this.analogStickGroupBox.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.analogYAxisUpDown)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.analogXAxisUpDown)).EndInit();
+			this.mainStickGroupBox.ResumeLayout(false);
+			this.mainStickGroupBox.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.mainStickYAxisUpDown)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.mainStickXAxisUpDown)).EndInit();
 			this.cstickGroupBox.ResumeLayout(false);
 			this.cstickGroupBox.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.cstickYAxisUpDown)).EndInit();
@@ -554,14 +554,14 @@
 		private System.Windows.Forms.CheckBox dpadDownCheckBox;
 		private System.Windows.Forms.CheckBox dpadLeftCheckBox;
 		private System.Windows.Forms.CheckBox dpadRightCheckBox;
-		private System.Windows.Forms.GroupBox analogStickGroupBox;
-		private System.Windows.Forms.Label analogXAxisLabel;
-		private System.Windows.Forms.Label analogYAxisLabel;
+		private System.Windows.Forms.GroupBox mainStickGroupBox;
+		private System.Windows.Forms.Label mainStickXAxisLabel;
+		private System.Windows.Forms.Label mainStickYAxisLabel;
 		private System.Windows.Forms.GroupBox cstickGroupBox;
 		private System.Windows.Forms.Label cstickYAxisLabel;
 		private System.Windows.Forms.Label cstickXAxisLabel;
-		private System.Windows.Forms.NumericUpDown analogYAxisUpDown;
-		private System.Windows.Forms.NumericUpDown analogXAxisUpDown;
+		private System.Windows.Forms.NumericUpDown mainStickYAxisUpDown;
+		private System.Windows.Forms.NumericUpDown mainStickXAxisUpDown;
 		private System.Windows.Forms.NumericUpDown cstickYAxisUpDown;
 		private System.Windows.Forms.NumericUpDown cstickXAxisUpDown;
 		private System.Windows.Forms.GroupBox triggerGroupBox;

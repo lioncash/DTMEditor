@@ -66,8 +66,8 @@ namespace DTMEditor
 				dpadRightCheckBox.Checked = false;
 
 				// Center the control sticks
-				analogXAxisUpDown.Value = 128;
-				analogYAxisUpDown.Value = 128;
+				mainStickXAxisUpDown.Value = 128;
+				mainStickYAxisUpDown.Value = 128;
 				cstickXAxisUpDown.Value = 128;
 				cstickYAxisUpDown.Value = 128;
 
@@ -90,8 +90,8 @@ namespace DTMEditor
 				dpadRightCheckBox.Checked = data.IsButtonPressed(GameCubeButton.DPadRight);
 
 				// Axes
-				analogXAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.AnalogXAxis);
-				analogYAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.AnalogYAxis);
+				mainStickXAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.AnalogXAxis);
+				mainStickYAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.AnalogYAxis);
 				cstickXAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.CStickXAxis);
 				cstickYAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.CStickYAxis);
 
