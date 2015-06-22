@@ -15,19 +15,19 @@ namespace DTMEditor.FileHandling
 		/// <summary>
 		/// Constructor
 		/// </summary>
-		/// <param name="filename">Path to the DTM movie file.</param>
-		public DTM(string filename)
+		/// <param name="filePath">Path to the DTM movie file.</param>
+		public DTM(string filePath)
 		{
-			if (filename == null)
-				throw new ArgumentNullException("filename");
+			if (filePath == null)
+				throw new ArgumentNullException("filePath");
 
-			if (!File.Exists(filename))
-				throw new FileNotFoundException("Specified file does not exist.", filename);
+			if (!File.Exists(filePath))
+				throw new FileNotFoundException("Specified file does not exist.", filePath);
 
-			FilePath = filename;
+			FilePath = filePath;
 			ControllerData = new List<DTMControllerDatum>();
 
-			using (var reader = new BinaryReader(File.OpenRead(filename)))
+			using (var reader = new BinaryReader(File.OpenRead(filePath)))
 			{
 				byte[] fileMagic = reader.ReadBytes(4);
 				if (!IsValidHeaderID(fileMagic))
@@ -43,7 +43,7 @@ namespace DTMEditor.FileHandling
 				UniqueID = reader.ReadUInt64();
 				NumRerecords = reader.ReadUInt32();
 				Author = reader.ReadBytes(32);
-				VideoBackend = reader.ReadBytes(16);
+				VideoBackEnd = reader.ReadBytes(16);
 				AudioEmulator = reader.ReadBytes(16);
 				MD5 = reader.ReadBytes(16);
 				RecordingStartTime = reader.ReadUInt64();
@@ -151,7 +151,7 @@ namespace DTMEditor.FileHandling
 		/// <summary>
 		/// Name of the video backend used.
 		/// </summary>
-		public byte[] VideoBackend { get; private set; }
+		public byte[] VideoBackEnd { get; private set; }
 
 		/// <summary>
 		/// Name of the audio emulator used.
@@ -238,7 +238,7 @@ namespace DTMEditor.FileHandling
 
 				bw.Write(NumRerecords);
 				bw.Write(Author);
-				bw.Write(VideoBackend);
+				bw.Write(VideoBackEnd);
 
 				// Reserved
 				bw.Write(new byte[16]);
