@@ -319,7 +319,7 @@
 			this.mainStickYAxisUpDown.Size = new System.Drawing.Size(105, 20);
 			this.mainStickYAxisUpDown.TabIndex = 7;
 			this.mainStickYAxisUpDown.Value = new decimal(new int[] {
-            1,
+            128,
             0,
             0,
             0});
@@ -341,7 +341,7 @@
 			this.mainStickXAxisUpDown.Size = new System.Drawing.Size(105, 20);
 			this.mainStickXAxisUpDown.TabIndex = 6;
 			this.mainStickXAxisUpDown.Value = new decimal(new int[] {
-            1,
+            128,
             0,
             0,
             0});
@@ -394,7 +394,7 @@
 			this.cstickYAxisUpDown.Size = new System.Drawing.Size(105, 20);
 			this.cstickYAxisUpDown.TabIndex = 9;
 			this.cstickYAxisUpDown.Value = new decimal(new int[] {
-            1,
+            128,
             0,
             0,
             0});
@@ -416,7 +416,7 @@
 			this.cstickXAxisUpDown.Size = new System.Drawing.Size(105, 20);
 			this.cstickXAxisUpDown.TabIndex = 8;
 			this.cstickXAxisUpDown.Value = new decimal(new int[] {
-            1,
+            128,
             0,
             0,
             0});
