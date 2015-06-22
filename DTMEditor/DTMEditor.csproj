@@ -38,8 +38,11 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileHandling\ControllerData\GameCubeAxis.cs" />
+    <Compile Include="FileHandling\ControllerData\GameCubeButton.cs" />
+    <Compile Include="FileHandling\ControllerData\GameCubeTrigger.cs" />
     <Compile Include="FileHandling\DTM.cs" />
-    <Compile Include="FileHandling\DTMControllerDatum.cs" />
+    <Compile Include="FileHandling\ControllerData\DTMControllerDatum.cs" />
     <Compile Include="FileHandling\InvalidDTMHeaderException.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>

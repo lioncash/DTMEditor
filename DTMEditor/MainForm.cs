@@ -2,6 +2,7 @@
 using System.IO;
 using System.Windows.Forms;
 using DTMEditor.FileHandling;
+using DTMEditor.FileHandling.ControllerData;
 
 namespace DTMEditor
 {
@@ -60,25 +61,25 @@ namespace DTMEditor
 			DTMControllerDatum data = openedDtm.ControllerData[index];
 
 			// Buttons
-			aButtonCheckBox.Checked   = data.IsButtonPressed(DTMControllerDatum.GameCubeButton.A);
-			bButtonCheckBox.Checked   = data.IsButtonPressed(DTMControllerDatum.GameCubeButton.B);
-			xButtonCheckBox.Checked   = data.IsButtonPressed(DTMControllerDatum.GameCubeButton.X);
-			yButtonCheckBox.Checked   = data.IsButtonPressed(DTMControllerDatum.GameCubeButton.Y);
-			zButtonCheckBox.Checked   = data.IsButtonPressed(DTMControllerDatum.GameCubeButton.Z);
-			dpadUpCheckBox.Checked    = data.IsButtonPressed(DTMControllerDatum.GameCubeButton.DPadUp);
-			dpadDownCheckBox.Checked  = data.IsButtonPressed(DTMControllerDatum.GameCubeButton.DPadDown);
-			dpadLeftCheckBox.Checked  = data.IsButtonPressed(DTMControllerDatum.GameCubeButton.DPadLeft);
-			dpadRightCheckBox.Checked = data.IsButtonPressed(DTMControllerDatum.GameCubeButton.DPadRight);
+			aButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.A);
+			bButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.B);
+			xButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.X);
+			yButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.Y);
+			zButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.Z);
+			dpadUpCheckBox.Checked    = data.IsButtonPressed(GameCubeButton.DPadUp);
+			dpadDownCheckBox.Checked  = data.IsButtonPressed(GameCubeButton.DPadDown);
+			dpadLeftCheckBox.Checked  = data.IsButtonPressed(GameCubeButton.DPadLeft);
+			dpadRightCheckBox.Checked = data.IsButtonPressed(GameCubeButton.DPadRight);
 
 			// Axes
-			analoxXAxisUpDown.Value = data.GetAxisValue(DTMControllerDatum.GameCubeAxis.AnalogXAxis);
-			analogYAxisUpDown.Value = data.GetAxisValue(DTMControllerDatum.GameCubeAxis.AnalogYAxis);
-			cstickXAxisUpDown.Value = data.GetAxisValue(DTMControllerDatum.GameCubeAxis.CStickXAxis);
-			cstickYAxisUpDown.Value = data.GetAxisValue(DTMControllerDatum.GameCubeAxis.CStickYAxis);
+			analoxXAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.AnalogXAxis);
+			analogYAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.AnalogYAxis);
+			cstickXAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.CStickXAxis);
+			cstickYAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.CStickYAxis);
 
 			// Triggers
-			leftTriggerUpDown.Value  = data.GetTriggerValue(DTMControllerDatum.GameCubeTrigger.L);
-			rightTriggerUpDown.Value = data.GetTriggerValue(DTMControllerDatum.GameCubeTrigger.R);
+			leftTriggerUpDown.Value  = data.GetTriggerValue(GameCubeTrigger.L);
+			rightTriggerUpDown.Value = data.GetTriggerValue(GameCubeTrigger.R);
 		}
 
 		private void saveMenuItem_Click(object sender, EventArgs e)

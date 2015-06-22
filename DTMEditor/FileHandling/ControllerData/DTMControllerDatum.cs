@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DTMEditor.FileHandling
+﻿namespace DTMEditor.FileHandling.ControllerData
 {
 	/// <summary>
 	/// Represents a single grouping of controller data.
@@ -20,43 +18,6 @@ namespace DTMEditor.FileHandling
 			Data = data;
 			FrameNumber = frameNumber;
 		}
-
-		#endregion
-
-		#region Enums
-
-		#region GameCube
-
-		[Flags]
-		public enum GameCubeButton
-		{
-			Start     = (1 << 0),
-			A         = (1 << 1),
-			B         = (1 << 2),
-			X         = (1 << 3),
-			Y         = (1 << 4),
-			Z         = (1 << 5),
-			DPadUp    = (1 << 6),
-			DPadDown  = (1 << 7),
-			DPadLeft  = (1 << 8),
-			DPadRight = (1 << 9)
-		}
-
-		public enum GameCubeTrigger
-		{
-			L,
-			R
-		}
-
-		public enum GameCubeAxis
-		{
-			AnalogXAxis,
-			AnalogYAxis,
-			CStickXAxis,
-			CStickYAxis
-		}
-
-		#endregion
 
 		#endregion
 
