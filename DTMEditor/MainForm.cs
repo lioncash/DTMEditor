@@ -52,34 +52,53 @@ namespace DTMEditor
 			string currentItem = frameListBox.SelectedItem.ToString();
 			int index = frameListBox.FindString(currentItem);
 
+			// Invalid index
 			if (index == -1)
 			{
-				// TODO: Clear all controls.
-				return;
+				aButtonCheckBox.Checked   = false;
+				bButtonCheckBox.Checked   = false;
+				xButtonCheckBox.Checked   = false;
+				yButtonCheckBox.Checked   = false;
+				zButtonCheckBox.Checked   = false;
+				dpadUpCheckBox.Checked    = false;
+				dpadDownCheckBox.Checked  = false;
+				dpadLeftCheckBox.Checked  = false;
+				dpadRightCheckBox.Checked = false;
+
+				// Center the control sticks
+				analogXAxisUpDown.Value = 128;
+				analogYAxisUpDown.Value = 128;
+				cstickXAxisUpDown.Value = 128;
+				cstickYAxisUpDown.Value = 128;
+
+				leftTriggerUpDown.Value  = leftTriggerUpDown.Minimum;
+				rightTriggerUpDown.Value = rightTriggerUpDown.Minimum;
 			}
+			else
+			{
+				DTMControllerDatum data = openedDtm.ControllerData[index];
 
-			DTMControllerDatum data = openedDtm.ControllerData[index];
+				// Buttons
+				aButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.A);
+				bButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.B);
+				xButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.X);
+				yButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.Y);
+				zButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.Z);
+				dpadUpCheckBox.Checked    = data.IsButtonPressed(GameCubeButton.DPadUp);
+				dpadDownCheckBox.Checked  = data.IsButtonPressed(GameCubeButton.DPadDown);
+				dpadLeftCheckBox.Checked  = data.IsButtonPressed(GameCubeButton.DPadLeft);
+				dpadRightCheckBox.Checked = data.IsButtonPressed(GameCubeButton.DPadRight);
 
-			// Buttons
-			aButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.A);
-			bButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.B);
-			xButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.X);
-			yButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.Y);
-			zButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.Z);
-			dpadUpCheckBox.Checked    = data.IsButtonPressed(GameCubeButton.DPadUp);
-			dpadDownCheckBox.Checked  = data.IsButtonPressed(GameCubeButton.DPadDown);
-			dpadLeftCheckBox.Checked  = data.IsButtonPressed(GameCubeButton.DPadLeft);
-			dpadRightCheckBox.Checked = data.IsButtonPressed(GameCubeButton.DPadRight);
+				// Axes
+				analogXAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.AnalogXAxis);
+				analogYAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.AnalogYAxis);
+				cstickXAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.CStickXAxis);
+				cstickYAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.CStickYAxis);
 
-			// Axes
-			analoxXAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.AnalogXAxis);
-			analogYAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.AnalogYAxis);
-			cstickXAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.CStickXAxis);
-			cstickYAxisUpDown.Value = data.GetAxisValue(GameCubeAxis.CStickYAxis);
-
-			// Triggers
-			leftTriggerUpDown.Value  = data.GetTriggerValue(GameCubeTrigger.L);
-			rightTriggerUpDown.Value = data.GetTriggerValue(GameCubeTrigger.R);
+				// Triggers
+				leftTriggerUpDown.Value  = data.GetTriggerValue(GameCubeTrigger.L);
+				rightTriggerUpDown.Value = data.GetTriggerValue(GameCubeTrigger.R);
+			}
 		}
 
 		private void saveMenuItem_Click(object sender, EventArgs e)

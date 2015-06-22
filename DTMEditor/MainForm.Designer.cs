@@ -51,7 +51,7 @@
 			this.dpadRightCheckBox = new System.Windows.Forms.CheckBox();
 			this.analogStickGroupBox = new System.Windows.Forms.GroupBox();
 			this.analogYAxisUpDown = new System.Windows.Forms.NumericUpDown();
-			this.analoxXAxisUpDown = new System.Windows.Forms.NumericUpDown();
+			this.analogXAxisUpDown = new System.Windows.Forms.NumericUpDown();
 			this.analogYAxisLabel = new System.Windows.Forms.Label();
 			this.analogXAxisLabel = new System.Windows.Forms.Label();
 			this.cstickGroupBox = new System.Windows.Forms.GroupBox();
@@ -71,7 +71,7 @@
 			this.dpadFlowLayout.SuspendLayout();
 			this.analogStickGroupBox.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.analogYAxisUpDown)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.analoxXAxisUpDown)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.analogXAxisUpDown)).BeginInit();
 			this.cstickGroupBox.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.cstickYAxisUpDown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cstickXAxisUpDown)).BeginInit();
@@ -292,7 +292,7 @@
 			// analogStickGroupBox
 			// 
 			this.analogStickGroupBox.Controls.Add(this.analogYAxisUpDown);
-			this.analogStickGroupBox.Controls.Add(this.analoxXAxisUpDown);
+			this.analogStickGroupBox.Controls.Add(this.analogXAxisUpDown);
 			this.analogStickGroupBox.Controls.Add(this.analogYAxisLabel);
 			this.analogStickGroupBox.Controls.Add(this.analogXAxisLabel);
 			this.analogStickGroupBox.Location = new System.Drawing.Point(153, 131);
@@ -324,23 +324,23 @@
             0,
             0});
 			// 
-			// analoxXAxisUpDown
+			// analogXAxisUpDown
 			// 
-			this.analoxXAxisUpDown.Location = new System.Drawing.Point(45, 17);
-			this.analoxXAxisUpDown.Maximum = new decimal(new int[] {
+			this.analogXAxisUpDown.Location = new System.Drawing.Point(45, 17);
+			this.analogXAxisUpDown.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
-			this.analoxXAxisUpDown.Minimum = new decimal(new int[] {
+			this.analogXAxisUpDown.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-			this.analoxXAxisUpDown.Name = "analoxXAxisUpDown";
-			this.analoxXAxisUpDown.Size = new System.Drawing.Size(105, 20);
-			this.analoxXAxisUpDown.TabIndex = 6;
-			this.analoxXAxisUpDown.Value = new decimal(new int[] {
+			this.analogXAxisUpDown.Name = "analogXAxisUpDown";
+			this.analogXAxisUpDown.Size = new System.Drawing.Size(105, 20);
+			this.analogXAxisUpDown.TabIndex = 6;
+			this.analogXAxisUpDown.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -520,7 +520,7 @@
 			this.analogStickGroupBox.ResumeLayout(false);
 			this.analogStickGroupBox.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.analogYAxisUpDown)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.analoxXAxisUpDown)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.analogXAxisUpDown)).EndInit();
 			this.cstickGroupBox.ResumeLayout(false);
 			this.cstickGroupBox.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.cstickYAxisUpDown)).EndInit();
@@ -561,7 +561,7 @@
 		private System.Windows.Forms.Label cstickYAxisLabel;
 		private System.Windows.Forms.Label cstickXAxisLabel;
 		private System.Windows.Forms.NumericUpDown analogYAxisUpDown;
-		private System.Windows.Forms.NumericUpDown analoxXAxisUpDown;
+		private System.Windows.Forms.NumericUpDown analogXAxisUpDown;
 		private System.Windows.Forms.NumericUpDown cstickYAxisUpDown;
 		private System.Windows.Forms.NumericUpDown cstickXAxisUpDown;
 		private System.Windows.Forms.GroupBox triggerGroupBox;
