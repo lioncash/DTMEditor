@@ -35,7 +35,7 @@
 		/// <returns>true if the button is pressed, false otherwise.</returns>
 		public bool IsButtonPressed(GameCubeButton button)
 		{
-			return (Data & (uint)button) != 0;
+			return (Data & (uint) button) != 0;
 		}
 
 		/// <summary>
@@ -77,7 +77,7 @@
 					return (int) ((Data >> 16) & 0xFF);
 
 				case GameCubeTrigger.R:
-					return (int)((Data >> 24) & 0xFF);
+					return (int) ((Data >> 24) & 0xFF);
 			}
 
 			// Will literally never happen
@@ -96,25 +96,27 @@
 		public void ModifyButton(GameCubeButton button, bool pressed)
 		{
 			if (pressed)
-				Data |= (uint) button;
+				Data |= (ulong) button;
 			else
-				Data &= ~((uint) button);
+				Data &= (ulong) ~button;
 		}
 
-		public void ModifyTrigger(GameCubeTrigger trigger, bool pressed, int value)
+		public void ModifyTrigger(GameCubeTrigger trigger, int value)
 		{
 			// TODO: I think L and R might be consider pressed after a threshold,
 			//       not simply if value is larger than zero.
+			bool pressed = (value > 0);
+
 			if (trigger == GameCubeTrigger.L)
 			{
 				if (pressed)
 				{
 					Data |= (1 << 10);
-					Data |= (uint)(value << 16);
+					Data |= ((ulong) value << 16);
 				}
 				else
 				{
-					Data &= ~0xFF0400U;
+					Data &= ~0xFF0400UL;
 				}
 			}
 			else
@@ -122,11 +124,11 @@
 				if (pressed)
 				{
 					Data |= (1 << 11);
-					Data |= (uint)(value << 24);
+					Data |= ((ulong) value << 24);
 				}
 				else
 				{
-					Data &= ~0xFF000800U;
+					Data &= ~0xFF000800UL;
 				}
 			}
 		}
@@ -139,13 +141,13 @@
 		public void ModifyAxis(GameCubeAxis axis, int value)
 		{
 			if (axis == GameCubeAxis.AnalogXAxis)
-				Data |= ~(Data & 0x000000FF000000UL) | ((ulong)value << 32);
+				Data = (Data & ~0x000000FF000000UL) | ((ulong) value << 32);
 			else if (axis == GameCubeAxis.AnalogYAxis)
-				Data |= ~(Data & 0x0000FF00000000UL) | ((ulong)value << 40);
+				Data = (Data & ~0x0000FF00000000UL) | ((ulong) value << 40);
 			else if (axis == GameCubeAxis.CStickXAxis)
-				Data |= ~(Data & 0x00FF0000000000UL) | ((ulong)value << 48);
+				Data = (Data & ~0x00FF0000000000UL) | ((ulong) value << 48);
 			else if (axis == GameCubeAxis.CStickYAxis)
-				Data |= ~(Data & 0xFF000000000000UL) | ((ulong)value << 56);
+				Data = (Data & ~0xFF000000000000UL) | ((ulong) value << 56);
 		}
 
 		#endregion

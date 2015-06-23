@@ -3,7 +3,7 @@
 namespace DTMEditor.FileHandling.ControllerData
 {
 	[Flags]
-	public enum GameCubeButton
+	public enum GameCubeButton : ulong
 	{
 		Start     = (1 << 0),
 		A         = (1 << 1),

@@ -50,8 +50,7 @@ namespace DTMEditor
 
 		private void frameListBox_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			string currentItem = frameListBox.SelectedItem.ToString();
-			int index = frameListBox.FindString(currentItem);
+			int index = frameListBox.SelectedIndex;
 
 			// Invalid index
 			if (index == -1)
@@ -145,5 +144,124 @@ namespace DTMEditor
 		{
 			Application.Exit();
 		}
+
+		#region DTM Edition Functionality
+
+		#region Button Handling
+
+		private void aButtonCheckBox_Click(object sender, EventArgs e)
+		{
+			ValidateButton(GameCubeButton.A, aButtonCheckBox);
+		}
+
+		private void bButtonCheckBox_Click(object sender, EventArgs e)
+		{
+			ValidateButton(GameCubeButton.B, bButtonCheckBox);
+		}
+
+		private void xButtonCheckBox_Click(object sender, EventArgs e)
+		{
+			ValidateButton(GameCubeButton.X, xButtonCheckBox);
+		}
+
+		private void yButtonCheckBox_Click(object sender, EventArgs e)
+		{
+			ValidateButton(GameCubeButton.Y, yButtonCheckBox);
+		}
+
+		private void zButtonCheckBox_Click(object sender, EventArgs e)
+		{
+			ValidateButton(GameCubeButton.Z, zButtonCheckBox);
+		}
+
+		private void dpadUpCheckBox_Click(object sender, EventArgs e)
+		{
+			ValidateButton(GameCubeButton.DPadUp, dpadUpCheckBox);
+		}
+
+		private void dpadDownCheckBox_Click(object sender, EventArgs e)
+		{
+			ValidateButton(GameCubeButton.DPadDown, dpadDownCheckBox);
+		}
+
+		private void dpadLeftCheckBox_Click(object sender, EventArgs e)
+		{
+			ValidateButton(GameCubeButton.DPadLeft, dpadLeftCheckBox);
+		}
+
+		private void dpadRightCheckBox_Click(object sender, EventArgs e)
+		{
+			ValidateButton(GameCubeButton.DPadRight, dpadRightCheckBox);
+		}
+
+		#endregion
+
+		#region Axis Handling
+
+		private void mainStickXAxisUpDown_ValueChanged(object sender, EventArgs e)
+		{
+			ValidateAxis(GameCubeAxis.AnalogXAxis, mainStickXAxisUpDown);
+		}
+
+		private void mainStickYAxisUpDown_ValueChanged(object sender, EventArgs e)
+		{
+			ValidateAxis(GameCubeAxis.AnalogYAxis, mainStickYAxisUpDown);
+		}
+
+		private void cstickXAxisUpDown_ValueChanged(object sender, EventArgs e)
+		{
+			ValidateAxis(GameCubeAxis.CStickXAxis, cstickXAxisUpDown);
+		}
+
+		private void cstickYAxisUpDown_ValueChanged(object sender, EventArgs e)
+		{
+			ValidateAxis(GameCubeAxis.CStickYAxis, cstickYAxisUpDown);
+		}
+
+		#endregion
+
+		#region Trigger Handling
+
+		private void leftTriggerUpDown_ValueChanged(object sender, EventArgs e)
+		{
+			ValidateTrigger(GameCubeTrigger.L, leftTriggerUpDown);
+		}
+
+		private void rightTriggerUpDown_ValueChanged(object sender, EventArgs e)
+		{
+			ValidateTrigger(GameCubeTrigger.R, rightTriggerUpDown);
+		}
+
+		#endregion
+
+		#endregion
+
+		#region Private Helpers
+
+		private void ValidateButton(GameCubeButton button, CheckBox checkbox)
+		{
+			int index = frameListBox.SelectedIndex;
+
+			if (index != -1)
+				openedDtm.ControllerData[index].ModifyButton(button, checkbox.Checked);
+		}
+
+		private void ValidateAxis(GameCubeAxis axis, NumericUpDown axisUpDown)
+		{
+			int index = frameListBox.SelectedIndex;
+
+			if (index != -1)
+				openedDtm.ControllerData[index].ModifyAxis(axis, (int)axisUpDown.Value);
+		}
+
+		private void ValidateTrigger(GameCubeTrigger trigger, NumericUpDown axisUpDown)
+		{
+			int index = frameListBox.SelectedIndex;
+
+			if (index != -1)
+				openedDtm.ControllerData[index].ModifyTrigger(trigger, (int)axisUpDown.Value);
+		}
+
+		#endregion
 	}
 }
