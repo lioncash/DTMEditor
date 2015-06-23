@@ -149,6 +149,11 @@ namespace DTMEditor
 
 		#region Button Handling
 
+		private void startCheckBox_Click(object sender, EventArgs e)
+		{
+			ValidateButton(GameCubeButton.Start, startButtonCheckBox);
+		}
+
 		private void aButtonCheckBox_Click(object sender, EventArgs e)
 		{
 			ValidateButton(GameCubeButton.A, aButtonCheckBox);

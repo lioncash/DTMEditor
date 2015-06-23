@@ -39,6 +39,7 @@
 			this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.buttonGroupBox = new System.Windows.Forms.GroupBox();
 			this.buttonFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+			this.startButtonCheckBox = new System.Windows.Forms.CheckBox();
 			this.aButtonCheckBox = new System.Windows.Forms.CheckBox();
 			this.bButtonCheckBox = new System.Windows.Forms.CheckBox();
 			this.xButtonCheckBox = new System.Windows.Forms.CheckBox();
@@ -98,13 +99,14 @@
 			// 
 			// mainMenuStrip
 			// 
+			resources.ApplyResources(this.mainMenuStrip, "mainMenuStrip");
 			this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
-			resources.ApplyResources(this.mainMenuStrip, "mainMenuStrip");
 			this.mainMenuStrip.Name = "mainMenuStrip";
 			// 
 			// fileToolStripMenuItem
 			// 
+			resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openDTMMenuItem,
             this.saveMenuItem,
@@ -112,35 +114,34 @@
             this.toolStripSeparator1,
             this.exitMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
 			// 
 			// openDTMMenuItem
 			// 
-			this.openDTMMenuItem.Name = "openDTMMenuItem";
 			resources.ApplyResources(this.openDTMMenuItem, "openDTMMenuItem");
+			this.openDTMMenuItem.Name = "openDTMMenuItem";
 			this.openDTMMenuItem.Click += new System.EventHandler(this.openDTMMenuItem_Click);
 			// 
 			// saveMenuItem
 			// 
-			this.saveMenuItem.Name = "saveMenuItem";
 			resources.ApplyResources(this.saveMenuItem, "saveMenuItem");
+			this.saveMenuItem.Name = "saveMenuItem";
 			this.saveMenuItem.Click += new System.EventHandler(this.saveMenuItem_Click);
 			// 
 			// saveAsMenuItem
 			// 
-			this.saveAsMenuItem.Name = "saveAsMenuItem";
 			resources.ApplyResources(this.saveAsMenuItem, "saveAsMenuItem");
+			this.saveAsMenuItem.Name = "saveAsMenuItem";
 			this.saveAsMenuItem.Click += new System.EventHandler(this.saveAsMenuItem_Click);
 			// 
 			// toolStripSeparator1
 			// 
-			this.toolStripSeparator1.Name = "toolStripSeparator1";
 			resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
 			// 
 			// exitMenuItem
 			// 
-			this.exitMenuItem.Name = "exitMenuItem";
 			resources.ApplyResources(this.exitMenuItem, "exitMenuItem");
+			this.exitMenuItem.Name = "exitMenuItem";
 			this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
 			// 
 			// buttonGroupBox
@@ -152,13 +153,21 @@
 			// 
 			// buttonFlowLayout
 			// 
+			resources.ApplyResources(this.buttonFlowLayout, "buttonFlowLayout");
+			this.buttonFlowLayout.Controls.Add(this.startButtonCheckBox);
 			this.buttonFlowLayout.Controls.Add(this.aButtonCheckBox);
 			this.buttonFlowLayout.Controls.Add(this.bButtonCheckBox);
 			this.buttonFlowLayout.Controls.Add(this.xButtonCheckBox);
 			this.buttonFlowLayout.Controls.Add(this.yButtonCheckBox);
 			this.buttonFlowLayout.Controls.Add(this.zButtonCheckBox);
-			resources.ApplyResources(this.buttonFlowLayout, "buttonFlowLayout");
 			this.buttonFlowLayout.Name = "buttonFlowLayout";
+			// 
+			// startButtonCheckBox
+			// 
+			resources.ApplyResources(this.startButtonCheckBox, "startButtonCheckBox");
+			this.startButtonCheckBox.Name = "startButtonCheckBox";
+			this.startButtonCheckBox.UseVisualStyleBackColor = true;
+			this.startButtonCheckBox.Click += new System.EventHandler(this.startCheckBox_Click);
 			// 
 			// aButtonCheckBox
 			// 
@@ -204,11 +213,11 @@
 			// 
 			// dpadFlowLayout
 			// 
+			resources.ApplyResources(this.dpadFlowLayout, "dpadFlowLayout");
 			this.dpadFlowLayout.Controls.Add(this.dpadUpCheckBox);
 			this.dpadFlowLayout.Controls.Add(this.dpadDownCheckBox);
 			this.dpadFlowLayout.Controls.Add(this.dpadLeftCheckBox);
 			this.dpadFlowLayout.Controls.Add(this.dpadRightCheckBox);
-			resources.ApplyResources(this.dpadFlowLayout, "dpadFlowLayout");
 			this.dpadFlowLayout.Name = "dpadFlowLayout";
 			// 
 			// dpadUpCheckBox
@@ -241,8 +250,8 @@
 			// 
 			// mainStickGroupBox
 			// 
-			this.mainStickGroupBox.Controls.Add(this.mainStickTableLayout);
 			resources.ApplyResources(this.mainStickGroupBox, "mainStickGroupBox");
+			this.mainStickGroupBox.Controls.Add(this.mainStickTableLayout);
 			this.mainStickGroupBox.Name = "mainStickGroupBox";
 			this.mainStickGroupBox.TabStop = false;
 			// 
@@ -309,8 +318,8 @@
 			// 
 			// cstickGroupBox
 			// 
-			this.cstickGroupBox.Controls.Add(this.cstickTableLayout);
 			resources.ApplyResources(this.cstickGroupBox, "cstickGroupBox");
+			this.cstickGroupBox.Controls.Add(this.cstickTableLayout);
 			this.cstickGroupBox.Name = "cstickGroupBox";
 			this.cstickGroupBox.TabStop = false;
 			// 
@@ -377,8 +386,8 @@
 			// 
 			// triggerGroupBox
 			// 
-			this.triggerGroupBox.Controls.Add(this.triggerTableLayout);
 			resources.ApplyResources(this.triggerGroupBox, "triggerGroupBox");
+			this.triggerGroupBox.Controls.Add(this.triggerTableLayout);
 			this.triggerGroupBox.Name = "triggerGroupBox";
 			this.triggerGroupBox.TabStop = false;
 			// 
@@ -514,6 +523,7 @@
 		private System.Windows.Forms.TableLayoutPanel mainStickTableLayout;
 		private System.Windows.Forms.TableLayoutPanel cstickTableLayout;
 		private System.Windows.Forms.TableLayoutPanel pairTableLayout;
+		private System.Windows.Forms.CheckBox startButtonCheckBox;
 	}
 }
 
