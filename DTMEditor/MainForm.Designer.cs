@@ -90,8 +90,9 @@
 			// 
 			// frameListBox
 			// 
-			this.frameListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+			this.frameListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.frameListBox.FormattingEnabled = true;
 			this.frameListBox.Location = new System.Drawing.Point(12, 38);
 			this.frameListBox.Name = "frameListBox";
@@ -160,6 +161,7 @@
 			// 
 			// buttonGroupBox
 			// 
+			this.buttonGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonGroupBox.Controls.Add(this.buttonFlowLayout);
 			this.buttonGroupBox.Location = new System.Drawing.Point(153, 38);
 			this.buttonGroupBox.Name = "buttonGroupBox";
@@ -233,6 +235,7 @@
 			// 
 			// dpadGroupBox
 			// 
+			this.dpadGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.dpadGroupBox.Controls.Add(this.dpadFlowLayout);
 			this.dpadGroupBox.Location = new System.Drawing.Point(153, 85);
 			this.dpadGroupBox.Name = "dpadGroupBox";
@@ -554,6 +557,7 @@
 			// 
 			// pairTableLayout
 			// 
+			this.pairTableLayout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.pairTableLayout.AutoSize = true;
 			this.pairTableLayout.ColumnCount = 2;
 			this.pairTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
