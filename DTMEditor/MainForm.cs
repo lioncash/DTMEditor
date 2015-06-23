@@ -20,6 +20,23 @@ namespace DTMEditor
 
 		#endregion
 
+		#region Drag and Drop Handling
+
+		private void MainForm_DragEnter(object sender, DragEventArgs e)
+		{
+			if (e.Data.GetDataPresent(DataFormats.FileDrop))
+				e.Effect = DragDropEffects.Copy;
+		}
+
+		private void MainForm_DragDrop(object sender, DragEventArgs e)
+		{
+			string[] files = (string[])(e.Data.GetData(DataFormats.FileDrop, false));
+
+			OpenDTM(files[0]);
+		}
+
+		#endregion
+
 		#region MenuStrip Handling
 
 		private void openDTMMenuItem_Click(object sender, EventArgs e)
@@ -28,28 +45,7 @@ namespace DTMEditor
 			ofd.Filter = "Dolphin Movie File (*.dtm)|*.dtm";
 
 			if (ofd.ShowDialog() == DialogResult.OK)
-			{
-				// TODO: When C# 6 comes out, collapse these catch statements.
-				//       (No, simply catching the base exception type is *not* a good alternative).
-				try
-				{
-					openedDtm = new DTM(ofd.FileName);
-					frameListBox.DataSource = Enumerable.Range(0, openedDtm.ControllerData.Count()).Select(x => string.Format("Frame {0}", x)).ToList();
-				}
-				catch (FileNotFoundException fnfe)
-				{
-					MessageBox.Show(fnfe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				}
-				catch (InvalidDTMHeaderException idhe)
-				{
-					MessageBox.Show(idhe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				}
-				catch (IOException ioe)
-				{
-					// If we end up here, some other application is using the DTM file that is selected.
-					MessageBox.Show(ioe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				}
-			}
+				OpenDTM(ofd.FileName);
 
 			ofd.Dispose();
 		}
@@ -254,6 +250,30 @@ namespace DTMEditor
 		#endregion
 
 		#region Private Helper Methods
+
+		private void OpenDTM(string filePath)
+		{
+			// TODO: When C# 6 comes out, collapse these catch statements.
+			//       (No, simply catching the base exception type is *not* a good alternative).
+			try
+			{
+				openedDtm = new DTM(filePath);
+				frameListBox.DataSource = Enumerable.Range(0, openedDtm.ControllerData.Count()).Select(x => string.Format("Frame {0}", x)).ToList();
+			}
+			catch (FileNotFoundException fnfe)
+			{
+				MessageBox.Show(fnfe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			catch (InvalidDTMHeaderException idhe)
+			{
+				MessageBox.Show(idhe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			catch (IOException ioe)
+			{
+				// If we end up here, some other application is using the DTM file that is selected.
+				MessageBox.Show(ioe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
 
 		private void ValidateButton(GameCubeButton button, CheckBox checkbox)
 		{
