@@ -42,7 +42,7 @@ namespace DTMEditor
 		private void openDTMMenuItem_Click(object sender, EventArgs e)
 		{
 			var ofd = new OpenFileDialog();
-			ofd.Filter = "Dolphin Movie File (*.dtm)|*.dtm";
+			ofd.Filter = "Dolphin TAS Movie File (*.dtm)|*.dtm";
 
 			if (ofd.ShowDialog() == DialogResult.OK)
 				OpenDTM(ofd.FileName);
@@ -71,7 +71,7 @@ namespace DTMEditor
 		private void saveAsMenuItem_Click(object sender, EventArgs e)
 		{
 			var sfd = new SaveFileDialog();
-			sfd.Filter = "Dolphin Movie File (*.dtm)|*.dtm";
+			sfd.Filter = "Dolphin TAS Movie File (*.dtm)|*.dtm";
 
 			if (sfd.ShowDialog() == DialogResult.OK)
 			{
