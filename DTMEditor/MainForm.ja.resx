@@ -220,7 +220,4 @@
   <data name="triggerGroupBox.Text" xml:space="preserve">
     <value>トリガー</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>DTMエディタ</value>
-  </data>
 </root>
