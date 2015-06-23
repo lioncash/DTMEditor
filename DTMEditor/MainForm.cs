@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using DTMEditor.FileHandling;
 using DTMEditor.FileHandling.ControllerData;
+using DTMEditor.Properties;
 
 namespace DTMEditor
 {
@@ -42,7 +43,7 @@ namespace DTMEditor
 		private void openDTMMenuItem_Click(object sender, EventArgs e)
 		{
 			var ofd = new OpenFileDialog();
-			ofd.Filter = "Dolphin TAS Movie File (*.dtm)|*.dtm";
+			ofd.Filter = Resources.MainFormTasMovieFilter;
 
 			if (ofd.ShowDialog() == DialogResult.OK)
 				OpenDTM(ofd.FileName);
@@ -64,14 +65,14 @@ namespace DTMEditor
 			catch (IOException ioe)
 			{
 				// Not much we can do in this case. Better than crashing and burning though.
-				MessageBox.Show(ioe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(ioe.Message, Resources.MessageBoxErrorCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
 		private void saveAsMenuItem_Click(object sender, EventArgs e)
 		{
 			var sfd = new SaveFileDialog();
-			sfd.Filter = "Dolphin TAS Movie File (*.dtm)|*.dtm";
+			sfd.Filter = Resources.MainFormTasMovieFilter;
 
 			if (sfd.ShowDialog() == DialogResult.OK)
 			{
@@ -82,7 +83,7 @@ namespace DTMEditor
 				catch (IOException ioe)
 				{
 					// Not much else we can do in this case.
-					MessageBox.Show(ioe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					MessageBox.Show(ioe.Message, Resources.MessageBoxErrorCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
 
@@ -258,20 +259,21 @@ namespace DTMEditor
 			try
 			{
 				openedDtm = new DTM(filePath);
-				frameListBox.DataSource = Enumerable.Range(0, openedDtm.ControllerData.Count()).Select(x => string.Format("Frame {0}", x)).ToList();
+				frameListBox.DataSource = Enumerable.Range(0, openedDtm.ControllerData.Count())
+				                                    .Select(x => string.Format(Resources.MainFormFrameFormatString, x)).ToList();
 			}
 			catch (FileNotFoundException fnfe)
 			{
-				MessageBox.Show(fnfe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(fnfe.Message, Resources.MessageBoxErrorCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 			catch (InvalidDTMHeaderException idhe)
 			{
-				MessageBox.Show(idhe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(idhe.Message, Resources.MessageBoxErrorCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 			catch (IOException ioe)
 			{
 				// If we end up here, some other application is using the DTM file that is selected.
-				MessageBox.Show(ioe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(ioe.Message, Resources.MessageBoxErrorCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 

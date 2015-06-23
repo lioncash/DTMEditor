@@ -29,6 +29,9 @@ namespace DTMEditor.FileHandling
 
 			using (var reader = new BinaryReader(File.OpenRead(filePath)))
 			{
+				if (reader.BaseStream.Length < 256)
+					throw new InvalidDTMHeaderException("Invalid file: Header too small. Should be 256 bytes but was " + reader.BaseStream.Length + " bytes.");
+
 				byte[] fileMagic = reader.ReadBytes(4);
 				if (!IsValidHeaderID(fileMagic))
 					throw new InvalidDTMHeaderException("Invalid file: Header magic is incorrect.");
