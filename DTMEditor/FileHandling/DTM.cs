@@ -290,9 +290,9 @@ namespace DTMEditor.FileHandling
 		private static bool IsValidHeaderID(byte[] data)
 		{
 			return data[0] == 'D' &&
-				   data[1] == 'T' &&
-				   data[2] == 'M' &&
-				   data[3] == 0x1A;
+			       data[1] == 'T' &&
+			       data[2] == 'M' &&
+			       data[3] == 0x1A;
 		}
 
 		#endregion
