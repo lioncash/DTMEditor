@@ -207,8 +207,8 @@
   <data name="cstickYAxisLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 29</value>
   </data>
-  <data name="&gt;&gt;bButtonCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cstickYAxisUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 29</value>
   </data>
   <data name="&gt;&gt;cstickGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -303,8 +303,8 @@
   <data name="&gt;&gt;yButtonCheckBox.Parent" xml:space="preserve">
     <value>buttonFlowLayout</value>
   </data>
-  <data name="dpadFlowLayout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
+  <data name="&gt;&gt;mainStickXAxisLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="mainStickXAxisLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -444,6 +444,9 @@
   <data name="&gt;&gt;mainStickYAxisUpDown.Parent" xml:space="preserve">
     <value>mainStickTableLayout</value>
   </data>
+  <data name="&gt;&gt;frameListBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="&gt;&gt;leftTriggerUpDown.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -453,8 +456,8 @@
   <data name="triggerGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 80</value>
   </data>
-  <data name="&gt;&gt;cstickTableLayout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;mainStickYAxisUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="yButtonCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -507,14 +510,14 @@
   <data name="aButtonCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="cstickYAxisUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 29</value>
+  <data name="&gt;&gt;leftTriggerUpDown.Parent" xml:space="preserve">
+    <value>triggerTableLayout</value>
   </data>
-  <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
-    <value>fileToolStripMenuItem</value>
+  <data name="rightTriggerUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;mainStickYAxisLabel.Name" xml:space="preserve">
-    <value>mainStickYAxisLabel</value>
+  <data name="rightTriggerLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;cstickTableLayout.Parent" xml:space="preserve">
     <value>cstickGroupBox</value>
@@ -542,9 +545,6 @@
   </data>
   <data name="&gt;&gt;triggerTableLayout.Name" xml:space="preserve">
     <value>triggerTableLayout</value>
-  </data>
-  <data name="&gt;&gt;mainStickXAxisLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;cstickYAxisUpDown.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -636,6 +636,9 @@
   <data name="exitMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
+  <data name="xButtonCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="&gt;&gt;bButtonCheckBox.Name" xml:space="preserve">
     <value>bButtonCheckBox</value>
   </data>
@@ -656,9 +659,6 @@
   </data>
   <data name="mainStickYAxisUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
-  </data>
-  <data name="&gt;&gt;leftTriggerUpDown.Parent" xml:space="preserve">
-    <value>triggerTableLayout</value>
   </data>
   <data name="&gt;&gt;saveMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -789,8 +789,8 @@
   <data name="mainStickYAxisLabel.Text" xml:space="preserve">
     <value>Y-Axis:</value>
   </data>
-  <data name="xButtonCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="triggerTableLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="leftTriggerUpDown" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="rightTriggerLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="rightTriggerUpDown" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="leftTriggerLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="mainStickXAxisLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -831,6 +831,9 @@
   <data name="pairTableLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="&gt;&gt;mainStickYAxisLabel.Name" xml:space="preserve">
+    <value>mainStickYAxisLabel</value>
+  </data>
   <data name="&gt;&gt;frameListBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -848,9 +851,6 @@
   </data>
   <data name="&gt;&gt;buttonFlowLayout.Name" xml:space="preserve">
     <value>buttonFlowLayout</value>
-  </data>
-  <data name="rightTriggerUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
   </data>
   <data name="&gt;&gt;openDTMMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -930,6 +930,9 @@
   <data name="&gt;&gt;mainStickYAxisUpDown.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
+    <value>fileToolStripMenuItem</value>
+  </data>
   <data name="xButtonCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -947,6 +950,9 @@
   </data>
   <data name="cstickXAxisLabel.Text" xml:space="preserve">
     <value>X-Axis:</value>
+  </data>
+  <data name="dpadFlowLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
   </data>
   <data name="buttonFlowLayout.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1032,8 +1038,8 @@
   <data name="frameListBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;mainStickYAxisUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;cstickTableLayout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;frameListBox.Name" xml:space="preserve">
     <value>frameListBox</value>
@@ -1044,11 +1050,8 @@
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="triggerTableLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="leftTriggerUpDown" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="rightTriggerLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="rightTriggerUpDown" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="leftTriggerLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="&gt;&gt;frameListBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;bButtonCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;cstickXAxisLabel.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -1073,9 +1076,6 @@
   </data>
   <data name="mainStickGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
-  </data>
-  <data name="rightTriggerLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;cstickXAxisUpDown.ZOrder" xml:space="preserve">
     <value>2</value>
