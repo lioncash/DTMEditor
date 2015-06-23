@@ -50,33 +50,45 @@
 			this.dpadLeftCheckBox = new System.Windows.Forms.CheckBox();
 			this.dpadRightCheckBox = new System.Windows.Forms.CheckBox();
 			this.mainStickGroupBox = new System.Windows.Forms.GroupBox();
-			this.mainStickYAxisUpDown = new System.Windows.Forms.NumericUpDown();
-			this.mainStickXAxisUpDown = new System.Windows.Forms.NumericUpDown();
+			this.mainStickYAxisFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
 			this.mainStickYAxisLabel = new System.Windows.Forms.Label();
+			this.mainStickYAxisUpDown = new System.Windows.Forms.NumericUpDown();
+			this.mainStickXAxisFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
 			this.mainStickXAxisLabel = new System.Windows.Forms.Label();
+			this.mainStickXAxisUpDown = new System.Windows.Forms.NumericUpDown();
 			this.cstickGroupBox = new System.Windows.Forms.GroupBox();
-			this.cstickYAxisUpDown = new System.Windows.Forms.NumericUpDown();
-			this.cstickXAxisUpDown = new System.Windows.Forms.NumericUpDown();
+			this.cstickYAxisFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
 			this.cstickYAxisLabel = new System.Windows.Forms.Label();
+			this.cstickYAxisUpDown = new System.Windows.Forms.NumericUpDown();
+			this.cstickXAxisFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
 			this.cstickXAxisLabel = new System.Windows.Forms.Label();
+			this.cstickXAxisUpDown = new System.Windows.Forms.NumericUpDown();
 			this.triggerGroupBox = new System.Windows.Forms.GroupBox();
-			this.rightTriggerUpDown = new System.Windows.Forms.NumericUpDown();
-			this.leftTriggerUpDown = new System.Windows.Forms.NumericUpDown();
+			this.rightTriggerFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
 			this.rightTriggerLabel = new System.Windows.Forms.Label();
+			this.rightTriggerUpDown = new System.Windows.Forms.NumericUpDown();
+			this.leftTriggerFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
 			this.leftTriggerLabel = new System.Windows.Forms.Label();
+			this.leftTriggerUpDown = new System.Windows.Forms.NumericUpDown();
 			this.mainMenuStrip.SuspendLayout();
 			this.buttonGroupBox.SuspendLayout();
 			this.buttonFlowLayout.SuspendLayout();
 			this.dpadGroupBox.SuspendLayout();
 			this.dpadFlowLayout.SuspendLayout();
 			this.mainStickGroupBox.SuspendLayout();
+			this.mainStickYAxisFlowLayout.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.mainStickYAxisUpDown)).BeginInit();
+			this.mainStickXAxisFlowLayout.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.mainStickXAxisUpDown)).BeginInit();
 			this.cstickGroupBox.SuspendLayout();
+			this.cstickYAxisFlowLayout.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.cstickYAxisUpDown)).BeginInit();
+			this.cstickXAxisFlowLayout.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.cstickXAxisUpDown)).BeginInit();
 			this.triggerGroupBox.SuspendLayout();
+			this.rightTriggerFlowLayout.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.rightTriggerUpDown)).BeginInit();
+			this.leftTriggerFlowLayout.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.leftTriggerUpDown)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -97,7 +109,7 @@
             this.fileToolStripMenuItem});
 			this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
 			this.mainMenuStrip.Name = "mainMenuStrip";
-			this.mainMenuStrip.Size = new System.Drawing.Size(494, 24);
+			this.mainMenuStrip.Size = new System.Drawing.Size(439, 24);
 			this.mainMenuStrip.TabIndex = 1;
 			this.mainMenuStrip.Text = "menuStrip1";
 			// 
@@ -157,7 +169,7 @@
 			this.buttonGroupBox.Controls.Add(this.buttonFlowLayout);
 			this.buttonGroupBox.Location = new System.Drawing.Point(153, 38);
 			this.buttonGroupBox.Name = "buttonGroupBox";
-			this.buttonGroupBox.Size = new System.Drawing.Size(329, 40);
+			this.buttonGroupBox.Size = new System.Drawing.Size(275, 40);
 			this.buttonGroupBox.TabIndex = 2;
 			this.buttonGroupBox.TabStop = false;
 			this.buttonGroupBox.Text = "Buttons";
@@ -172,7 +184,7 @@
 			this.buttonFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.buttonFlowLayout.Location = new System.Drawing.Point(3, 16);
 			this.buttonFlowLayout.Name = "buttonFlowLayout";
-			this.buttonFlowLayout.Size = new System.Drawing.Size(323, 21);
+			this.buttonFlowLayout.Size = new System.Drawing.Size(269, 21);
 			this.buttonFlowLayout.TabIndex = 0;
 			// 
 			// aButtonCheckBox
@@ -232,7 +244,7 @@
 			this.dpadGroupBox.Controls.Add(this.dpadFlowLayout);
 			this.dpadGroupBox.Location = new System.Drawing.Point(153, 85);
 			this.dpadGroupBox.Name = "dpadGroupBox";
-			this.dpadGroupBox.Size = new System.Drawing.Size(329, 40);
+			this.dpadGroupBox.Size = new System.Drawing.Size(275, 40);
 			this.dpadGroupBox.TabIndex = 3;
 			this.dpadGroupBox.TabStop = false;
 			this.dpadGroupBox.Text = "D-Pad";
@@ -246,7 +258,7 @@
 			this.dpadFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dpadFlowLayout.Location = new System.Drawing.Point(3, 16);
 			this.dpadFlowLayout.Name = "dpadFlowLayout";
-			this.dpadFlowLayout.Size = new System.Drawing.Size(323, 21);
+			this.dpadFlowLayout.Size = new System.Drawing.Size(269, 21);
 			this.dpadFlowLayout.TabIndex = 0;
 			// 
 			// dpadUpCheckBox
@@ -291,20 +303,41 @@
 			// 
 			// mainStickGroupBox
 			// 
-			this.mainStickGroupBox.Controls.Add(this.mainStickYAxisUpDown);
-			this.mainStickGroupBox.Controls.Add(this.mainStickXAxisUpDown);
-			this.mainStickGroupBox.Controls.Add(this.mainStickYAxisLabel);
-			this.mainStickGroupBox.Controls.Add(this.mainStickXAxisLabel);
+			this.mainStickGroupBox.AutoSize = true;
+			this.mainStickGroupBox.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.mainStickGroupBox.Controls.Add(this.mainStickYAxisFlowLayout);
+			this.mainStickGroupBox.Controls.Add(this.mainStickXAxisFlowLayout);
 			this.mainStickGroupBox.Location = new System.Drawing.Point(153, 131);
 			this.mainStickGroupBox.Name = "mainStickGroupBox";
-			this.mainStickGroupBox.Size = new System.Drawing.Size(156, 71);
+			this.mainStickGroupBox.Size = new System.Drawing.Size(136, 88);
 			this.mainStickGroupBox.TabIndex = 4;
 			this.mainStickGroupBox.TabStop = false;
 			this.mainStickGroupBox.Text = "Main Stick";
 			// 
+			// mainStickYAxisFlowLayout
+			// 
+			this.mainStickYAxisFlowLayout.AutoSize = true;
+			this.mainStickYAxisFlowLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.mainStickYAxisFlowLayout.Controls.Add(this.mainStickYAxisLabel);
+			this.mainStickYAxisFlowLayout.Controls.Add(this.mainStickYAxisUpDown);
+			this.mainStickYAxisFlowLayout.Location = new System.Drawing.Point(3, 43);
+			this.mainStickYAxisFlowLayout.Name = "mainStickYAxisFlowLayout";
+			this.mainStickYAxisFlowLayout.Size = new System.Drawing.Size(127, 26);
+			this.mainStickYAxisFlowLayout.TabIndex = 7;
+			// 
+			// mainStickYAxisLabel
+			// 
+			this.mainStickYAxisLabel.AutoSize = true;
+			this.mainStickYAxisLabel.Location = new System.Drawing.Point(3, 3);
+			this.mainStickYAxisLabel.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
+			this.mainStickYAxisLabel.Name = "mainStickYAxisLabel";
+			this.mainStickYAxisLabel.Size = new System.Drawing.Size(39, 13);
+			this.mainStickYAxisLabel.TabIndex = 2;
+			this.mainStickYAxisLabel.Text = "Y-Axis:";
+			// 
 			// mainStickYAxisUpDown
 			// 
-			this.mainStickYAxisUpDown.Location = new System.Drawing.Point(45, 44);
+			this.mainStickYAxisUpDown.Location = new System.Drawing.Point(45, 3);
 			this.mainStickYAxisUpDown.Maximum = new decimal(new int[] {
             255,
             0,
@@ -316,7 +349,7 @@
             0,
             0});
 			this.mainStickYAxisUpDown.Name = "mainStickYAxisUpDown";
-			this.mainStickYAxisUpDown.Size = new System.Drawing.Size(105, 20);
+			this.mainStickYAxisUpDown.Size = new System.Drawing.Size(79, 20);
 			this.mainStickYAxisUpDown.TabIndex = 7;
 			this.mainStickYAxisUpDown.Value = new decimal(new int[] {
             128,
@@ -324,9 +357,30 @@
             0,
             0});
 			// 
+			// mainStickXAxisFlowLayout
+			// 
+			this.mainStickXAxisFlowLayout.AutoSize = true;
+			this.mainStickXAxisFlowLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.mainStickXAxisFlowLayout.Controls.Add(this.mainStickXAxisLabel);
+			this.mainStickXAxisFlowLayout.Controls.Add(this.mainStickXAxisUpDown);
+			this.mainStickXAxisFlowLayout.Location = new System.Drawing.Point(3, 13);
+			this.mainStickXAxisFlowLayout.Name = "mainStickXAxisFlowLayout";
+			this.mainStickXAxisFlowLayout.Size = new System.Drawing.Size(127, 26);
+			this.mainStickXAxisFlowLayout.TabIndex = 7;
+			// 
+			// mainStickXAxisLabel
+			// 
+			this.mainStickXAxisLabel.AutoSize = true;
+			this.mainStickXAxisLabel.Location = new System.Drawing.Point(3, 3);
+			this.mainStickXAxisLabel.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
+			this.mainStickXAxisLabel.Name = "mainStickXAxisLabel";
+			this.mainStickXAxisLabel.Size = new System.Drawing.Size(39, 13);
+			this.mainStickXAxisLabel.TabIndex = 0;
+			this.mainStickXAxisLabel.Text = "X-Axis:";
+			// 
 			// mainStickXAxisUpDown
 			// 
-			this.mainStickXAxisUpDown.Location = new System.Drawing.Point(45, 17);
+			this.mainStickXAxisUpDown.Location = new System.Drawing.Point(45, 3);
 			this.mainStickXAxisUpDown.Maximum = new decimal(new int[] {
             255,
             0,
@@ -338,7 +392,7 @@
             0,
             0});
 			this.mainStickXAxisUpDown.Name = "mainStickXAxisUpDown";
-			this.mainStickXAxisUpDown.Size = new System.Drawing.Size(105, 20);
+			this.mainStickXAxisUpDown.Size = new System.Drawing.Size(79, 20);
 			this.mainStickXAxisUpDown.TabIndex = 6;
 			this.mainStickXAxisUpDown.Value = new decimal(new int[] {
             128,
@@ -346,40 +400,44 @@
             0,
             0});
 			// 
-			// mainStickYAxisLabel
-			// 
-			this.mainStickYAxisLabel.AutoSize = true;
-			this.mainStickYAxisLabel.Location = new System.Drawing.Point(7, 43);
-			this.mainStickYAxisLabel.Name = "mainStickYAxisLabel";
-			this.mainStickYAxisLabel.Size = new System.Drawing.Size(39, 13);
-			this.mainStickYAxisLabel.TabIndex = 2;
-			this.mainStickYAxisLabel.Text = "Y-Axis:";
-			// 
-			// mainStickXAxisLabel
-			// 
-			this.mainStickXAxisLabel.AutoSize = true;
-			this.mainStickXAxisLabel.Location = new System.Drawing.Point(7, 20);
-			this.mainStickXAxisLabel.Name = "mainStickXAxisLabel";
-			this.mainStickXAxisLabel.Size = new System.Drawing.Size(39, 13);
-			this.mainStickXAxisLabel.TabIndex = 0;
-			this.mainStickXAxisLabel.Text = "X-Axis:";
-			// 
 			// cstickGroupBox
 			// 
-			this.cstickGroupBox.Controls.Add(this.cstickYAxisUpDown);
-			this.cstickGroupBox.Controls.Add(this.cstickXAxisUpDown);
-			this.cstickGroupBox.Controls.Add(this.cstickYAxisLabel);
-			this.cstickGroupBox.Controls.Add(this.cstickXAxisLabel);
-			this.cstickGroupBox.Location = new System.Drawing.Point(326, 131);
+			this.cstickGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.cstickGroupBox.AutoSize = true;
+			this.cstickGroupBox.Controls.Add(this.cstickYAxisFlowLayout);
+			this.cstickGroupBox.Controls.Add(this.cstickXAxisFlowLayout);
+			this.cstickGroupBox.Location = new System.Drawing.Point(294, 131);
 			this.cstickGroupBox.Name = "cstickGroupBox";
-			this.cstickGroupBox.Size = new System.Drawing.Size(156, 71);
+			this.cstickGroupBox.Size = new System.Drawing.Size(135, 88);
 			this.cstickGroupBox.TabIndex = 5;
 			this.cstickGroupBox.TabStop = false;
 			this.cstickGroupBox.Text = "C-Stick";
 			// 
+			// cstickYAxisFlowLayout
+			// 
+			this.cstickYAxisFlowLayout.AutoSize = true;
+			this.cstickYAxisFlowLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.cstickYAxisFlowLayout.Controls.Add(this.cstickYAxisLabel);
+			this.cstickYAxisFlowLayout.Controls.Add(this.cstickYAxisUpDown);
+			this.cstickYAxisFlowLayout.Location = new System.Drawing.Point(6, 43);
+			this.cstickYAxisFlowLayout.Name = "cstickYAxisFlowLayout";
+			this.cstickYAxisFlowLayout.Size = new System.Drawing.Size(123, 26);
+			this.cstickYAxisFlowLayout.TabIndex = 7;
+			// 
+			// cstickYAxisLabel
+			// 
+			this.cstickYAxisLabel.AutoSize = true;
+			this.cstickYAxisLabel.Location = new System.Drawing.Point(3, 3);
+			this.cstickYAxisLabel.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
+			this.cstickYAxisLabel.Name = "cstickYAxisLabel";
+			this.cstickYAxisLabel.Size = new System.Drawing.Size(39, 13);
+			this.cstickYAxisLabel.TabIndex = 2;
+			this.cstickYAxisLabel.Text = "Y-Axis:";
+			// 
 			// cstickYAxisUpDown
 			// 
-			this.cstickYAxisUpDown.Location = new System.Drawing.Point(45, 44);
+			this.cstickYAxisUpDown.Location = new System.Drawing.Point(45, 3);
 			this.cstickYAxisUpDown.Maximum = new decimal(new int[] {
             255,
             0,
@@ -391,7 +449,7 @@
             0,
             0});
 			this.cstickYAxisUpDown.Name = "cstickYAxisUpDown";
-			this.cstickYAxisUpDown.Size = new System.Drawing.Size(105, 20);
+			this.cstickYAxisUpDown.Size = new System.Drawing.Size(75, 20);
 			this.cstickYAxisUpDown.TabIndex = 9;
 			this.cstickYAxisUpDown.Value = new decimal(new int[] {
             128,
@@ -399,9 +457,30 @@
             0,
             0});
 			// 
+			// cstickXAxisFlowLayout
+			// 
+			this.cstickXAxisFlowLayout.AutoSize = true;
+			this.cstickXAxisFlowLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.cstickXAxisFlowLayout.Controls.Add(this.cstickXAxisLabel);
+			this.cstickXAxisFlowLayout.Controls.Add(this.cstickXAxisUpDown);
+			this.cstickXAxisFlowLayout.Location = new System.Drawing.Point(6, 13);
+			this.cstickXAxisFlowLayout.Name = "cstickXAxisFlowLayout";
+			this.cstickXAxisFlowLayout.Size = new System.Drawing.Size(123, 26);
+			this.cstickXAxisFlowLayout.TabIndex = 7;
+			// 
+			// cstickXAxisLabel
+			// 
+			this.cstickXAxisLabel.AutoSize = true;
+			this.cstickXAxisLabel.Location = new System.Drawing.Point(3, 3);
+			this.cstickXAxisLabel.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
+			this.cstickXAxisLabel.Name = "cstickXAxisLabel";
+			this.cstickXAxisLabel.Size = new System.Drawing.Size(39, 13);
+			this.cstickXAxisLabel.TabIndex = 0;
+			this.cstickXAxisLabel.Text = "X-Axis:";
+			// 
 			// cstickXAxisUpDown
 			// 
-			this.cstickXAxisUpDown.Location = new System.Drawing.Point(45, 17);
+			this.cstickXAxisUpDown.Location = new System.Drawing.Point(45, 3);
 			this.cstickXAxisUpDown.Maximum = new decimal(new int[] {
             255,
             0,
@@ -413,7 +492,7 @@
             0,
             0});
 			this.cstickXAxisUpDown.Name = "cstickXAxisUpDown";
-			this.cstickXAxisUpDown.Size = new System.Drawing.Size(105, 20);
+			this.cstickXAxisUpDown.Size = new System.Drawing.Size(75, 20);
 			this.cstickXAxisUpDown.TabIndex = 8;
 			this.cstickXAxisUpDown.Value = new decimal(new int[] {
             128,
@@ -421,84 +500,90 @@
             0,
             0});
 			// 
-			// cstickYAxisLabel
-			// 
-			this.cstickYAxisLabel.AutoSize = true;
-			this.cstickYAxisLabel.Location = new System.Drawing.Point(7, 43);
-			this.cstickYAxisLabel.Name = "cstickYAxisLabel";
-			this.cstickYAxisLabel.Size = new System.Drawing.Size(39, 13);
-			this.cstickYAxisLabel.TabIndex = 2;
-			this.cstickYAxisLabel.Text = "Y-Axis:";
-			// 
-			// cstickXAxisLabel
-			// 
-			this.cstickXAxisLabel.AutoSize = true;
-			this.cstickXAxisLabel.Location = new System.Drawing.Point(7, 20);
-			this.cstickXAxisLabel.Name = "cstickXAxisLabel";
-			this.cstickXAxisLabel.Size = new System.Drawing.Size(39, 13);
-			this.cstickXAxisLabel.TabIndex = 0;
-			this.cstickXAxisLabel.Text = "X-Axis:";
-			// 
 			// triggerGroupBox
 			// 
-			this.triggerGroupBox.Controls.Add(this.rightTriggerUpDown);
-			this.triggerGroupBox.Controls.Add(this.leftTriggerUpDown);
-			this.triggerGroupBox.Controls.Add(this.rightTriggerLabel);
-			this.triggerGroupBox.Controls.Add(this.leftTriggerLabel);
-			this.triggerGroupBox.Location = new System.Drawing.Point(153, 209);
+			this.triggerGroupBox.AutoSize = true;
+			this.triggerGroupBox.Controls.Add(this.rightTriggerFlowLayout);
+			this.triggerGroupBox.Controls.Add(this.leftTriggerFlowLayout);
+			this.triggerGroupBox.Location = new System.Drawing.Point(153, 225);
 			this.triggerGroupBox.Name = "triggerGroupBox";
-			this.triggerGroupBox.Size = new System.Drawing.Size(156, 71);
+			this.triggerGroupBox.Size = new System.Drawing.Size(136, 88);
 			this.triggerGroupBox.TabIndex = 6;
 			this.triggerGroupBox.TabStop = false;
 			this.triggerGroupBox.Text = "Triggers";
 			// 
+			// rightTriggerFlowLayout
+			// 
+			this.rightTriggerFlowLayout.AutoSize = true;
+			this.rightTriggerFlowLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.rightTriggerFlowLayout.Controls.Add(this.rightTriggerLabel);
+			this.rightTriggerFlowLayout.Controls.Add(this.rightTriggerUpDown);
+			this.rightTriggerFlowLayout.Location = new System.Drawing.Point(3, 43);
+			this.rightTriggerFlowLayout.Name = "rightTriggerFlowLayout";
+			this.rightTriggerFlowLayout.Size = new System.Drawing.Size(127, 26);
+			this.rightTriggerFlowLayout.TabIndex = 7;
+			// 
+			// rightTriggerLabel
+			// 
+			this.rightTriggerLabel.AutoSize = true;
+			this.rightTriggerLabel.Location = new System.Drawing.Point(3, 3);
+			this.rightTriggerLabel.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
+			this.rightTriggerLabel.Name = "rightTriggerLabel";
+			this.rightTriggerLabel.Size = new System.Drawing.Size(18, 13);
+			this.rightTriggerLabel.TabIndex = 1;
+			this.rightTriggerLabel.Text = "R:";
+			// 
 			// rightTriggerUpDown
 			// 
-			this.rightTriggerUpDown.Location = new System.Drawing.Point(45, 43);
+			this.rightTriggerUpDown.Location = new System.Drawing.Point(24, 3);
 			this.rightTriggerUpDown.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
 			this.rightTriggerUpDown.Name = "rightTriggerUpDown";
-			this.rightTriggerUpDown.Size = new System.Drawing.Size(105, 20);
+			this.rightTriggerUpDown.Size = new System.Drawing.Size(100, 20);
 			this.rightTriggerUpDown.TabIndex = 3;
+			// 
+			// leftTriggerFlowLayout
+			// 
+			this.leftTriggerFlowLayout.AutoSize = true;
+			this.leftTriggerFlowLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.leftTriggerFlowLayout.Controls.Add(this.leftTriggerLabel);
+			this.leftTriggerFlowLayout.Controls.Add(this.leftTriggerUpDown);
+			this.leftTriggerFlowLayout.Location = new System.Drawing.Point(3, 14);
+			this.leftTriggerFlowLayout.Name = "leftTriggerFlowLayout";
+			this.leftTriggerFlowLayout.Size = new System.Drawing.Size(126, 26);
+			this.leftTriggerFlowLayout.TabIndex = 7;
+			// 
+			// leftTriggerLabel
+			// 
+			this.leftTriggerLabel.AutoSize = true;
+			this.leftTriggerLabel.Location = new System.Drawing.Point(3, 3);
+			this.leftTriggerLabel.Margin = new System.Windows.Forms.Padding(3, 3, 1, 0);
+			this.leftTriggerLabel.Name = "leftTriggerLabel";
+			this.leftTriggerLabel.Size = new System.Drawing.Size(16, 13);
+			this.leftTriggerLabel.TabIndex = 0;
+			this.leftTriggerLabel.Text = "L:";
 			// 
 			// leftTriggerUpDown
 			// 
-			this.leftTriggerUpDown.Location = new System.Drawing.Point(45, 17);
+			this.leftTriggerUpDown.Location = new System.Drawing.Point(23, 3);
 			this.leftTriggerUpDown.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
 			this.leftTriggerUpDown.Name = "leftTriggerUpDown";
-			this.leftTriggerUpDown.Size = new System.Drawing.Size(105, 20);
+			this.leftTriggerUpDown.Size = new System.Drawing.Size(100, 20);
 			this.leftTriggerUpDown.TabIndex = 2;
-			// 
-			// rightTriggerLabel
-			// 
-			this.rightTriggerLabel.AutoSize = true;
-			this.rightTriggerLabel.Location = new System.Drawing.Point(6, 43);
-			this.rightTriggerLabel.Name = "rightTriggerLabel";
-			this.rightTriggerLabel.Size = new System.Drawing.Size(18, 13);
-			this.rightTriggerLabel.TabIndex = 1;
-			this.rightTriggerLabel.Text = "R:";
-			// 
-			// leftTriggerLabel
-			// 
-			this.leftTriggerLabel.AutoSize = true;
-			this.leftTriggerLabel.Location = new System.Drawing.Point(6, 20);
-			this.leftTriggerLabel.Name = "leftTriggerLabel";
-			this.leftTriggerLabel.Size = new System.Drawing.Size(16, 13);
-			this.leftTriggerLabel.TabIndex = 0;
-			this.leftTriggerLabel.Text = "L:";
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(494, 404);
+			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.ClientSize = new System.Drawing.Size(439, 404);
 			this.Controls.Add(this.triggerGroupBox);
 			this.Controls.Add(this.cstickGroupBox);
 			this.Controls.Add(this.mainStickGroupBox);
@@ -507,6 +592,7 @@
 			this.Controls.Add(this.frameListBox);
 			this.Controls.Add(this.mainMenuStrip);
 			this.MainMenuStrip = this.mainMenuStrip;
+			this.MaximizeBox = false;
 			this.Name = "MainForm";
 			this.Text = "DTM Editor";
 			this.mainMenuStrip.ResumeLayout(false);
@@ -519,15 +605,27 @@
 			this.dpadFlowLayout.PerformLayout();
 			this.mainStickGroupBox.ResumeLayout(false);
 			this.mainStickGroupBox.PerformLayout();
+			this.mainStickYAxisFlowLayout.ResumeLayout(false);
+			this.mainStickYAxisFlowLayout.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.mainStickYAxisUpDown)).EndInit();
+			this.mainStickXAxisFlowLayout.ResumeLayout(false);
+			this.mainStickXAxisFlowLayout.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.mainStickXAxisUpDown)).EndInit();
 			this.cstickGroupBox.ResumeLayout(false);
 			this.cstickGroupBox.PerformLayout();
+			this.cstickYAxisFlowLayout.ResumeLayout(false);
+			this.cstickYAxisFlowLayout.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.cstickYAxisUpDown)).EndInit();
+			this.cstickXAxisFlowLayout.ResumeLayout(false);
+			this.cstickXAxisFlowLayout.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.cstickXAxisUpDown)).EndInit();
 			this.triggerGroupBox.ResumeLayout(false);
 			this.triggerGroupBox.PerformLayout();
+			this.rightTriggerFlowLayout.ResumeLayout(false);
+			this.rightTriggerFlowLayout.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.rightTriggerUpDown)).EndInit();
+			this.leftTriggerFlowLayout.ResumeLayout(false);
+			this.leftTriggerFlowLayout.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.leftTriggerUpDown)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -572,6 +670,12 @@
 		private System.Windows.Forms.ToolStripMenuItem saveMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem saveAsMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+		private System.Windows.Forms.FlowLayoutPanel mainStickXAxisFlowLayout;
+		private System.Windows.Forms.FlowLayoutPanel mainStickYAxisFlowLayout;
+		private System.Windows.Forms.FlowLayoutPanel cstickXAxisFlowLayout;
+		private System.Windows.Forms.FlowLayoutPanel cstickYAxisFlowLayout;
+		private System.Windows.Forms.FlowLayoutPanel leftTriggerFlowLayout;
+		private System.Windows.Forms.FlowLayoutPanel rightTriggerFlowLayout;
 	}
 }
 
