@@ -12,11 +12,9 @@
 		/// Constructor
 		/// </summary>
 		/// <param name="data">Data bytes</param>
-		/// <param name="frameNumber">Frame number the given data corresponds to.</param>
-		public DTMControllerDatum(ulong data, long frameNumber)
+		public DTMControllerDatum(ulong data)
 		{
 			Data = data;
-			FrameNumber = frameNumber;
 		}
 
 		#endregion
@@ -25,9 +23,6 @@
 
 		/// <summary>Raw representation of the controller data.</summary>
 		public ulong Data { get; protected set; }
-
-		/// <summary>Frame number this control data corresponds to.</summary>
-		public long FrameNumber { get; private set; }
 
 		#endregion
 
@@ -151,12 +146,6 @@
 				Data |= ~(Data & 0x00FF0000000000UL) | ((ulong)value << 48);
 			else if (axis == GameCubeAxis.CStickYAxis)
 				Data |= ~(Data & 0xFF000000000000UL) | ((ulong)value << 56);
-		}
-
-		// Used by the list view to enumerate frame titles.
-		public override string ToString()
-		{
-			return "Frame " + FrameNumber;
 		}
 
 		#endregion

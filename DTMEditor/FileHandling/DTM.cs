@@ -80,12 +80,8 @@ namespace DTMEditor.FileHandling
 				// Jump to controller data and read it.
 				reader.BaseStream.Position = 0x100;
 
-				int frameNum = 0;
 				while (reader.BaseStream.Position != reader.BaseStream.Length)
-				{
-					ControllerData.Add(new DTMControllerDatum(reader.ReadUInt64(), frameNum));
-					frameNum += 1;
-				}
+					ControllerData.Add(new DTMControllerDatum(reader.ReadUInt64()));
 			}
 		}
 

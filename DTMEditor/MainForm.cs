@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using DTMEditor.FileHandling;
 using DTMEditor.FileHandling.ControllerData;
@@ -27,7 +28,7 @@ namespace DTMEditor
 				try
 				{
 					openedDtm = new DTM(ofd.FileName);
-					frameListBox.DataSource = openedDtm.ControllerData;
+					frameListBox.DataSource = Enumerable.Range(0, openedDtm.ControllerData.Count()).Select(x => string.Format("Frame {0}", x)).ToList();
 				}
 				catch (FileNotFoundException fnfe)
 				{
