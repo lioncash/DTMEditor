@@ -45,6 +45,8 @@
 			this.xButtonCheckBox = new System.Windows.Forms.CheckBox();
 			this.yButtonCheckBox = new System.Windows.Forms.CheckBox();
 			this.zButtonCheckBox = new System.Windows.Forms.CheckBox();
+			this.lButtonCheckBox = new System.Windows.Forms.CheckBox();
+			this.rButtonCheckBox = new System.Windows.Forms.CheckBox();
 			this.dpadGroupBox = new System.Windows.Forms.GroupBox();
 			this.dpadFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
 			this.dpadUpCheckBox = new System.Windows.Forms.CheckBox();
@@ -159,6 +161,8 @@
 			this.buttonFlowLayout.Controls.Add(this.xButtonCheckBox);
 			this.buttonFlowLayout.Controls.Add(this.yButtonCheckBox);
 			this.buttonFlowLayout.Controls.Add(this.zButtonCheckBox);
+			this.buttonFlowLayout.Controls.Add(this.lButtonCheckBox);
+			this.buttonFlowLayout.Controls.Add(this.rButtonCheckBox);
 			resources.ApplyResources(this.buttonFlowLayout, "buttonFlowLayout");
 			this.buttonFlowLayout.Name = "buttonFlowLayout";
 			// 
@@ -203,6 +207,20 @@
 			this.zButtonCheckBox.Name = "zButtonCheckBox";
 			this.zButtonCheckBox.UseVisualStyleBackColor = true;
 			this.zButtonCheckBox.Click += new System.EventHandler(this.zButtonCheckBox_Click);
+			// 
+			// lButtonCheckBox
+			// 
+			resources.ApplyResources(this.lButtonCheckBox, "lButtonCheckBox");
+			this.lButtonCheckBox.Name = "lButtonCheckBox";
+			this.lButtonCheckBox.UseVisualStyleBackColor = true;
+			this.lButtonCheckBox.Click += new System.EventHandler(this.lButtonCheckBox_Click);
+			// 
+			// rButtonCheckBox
+			// 
+			resources.ApplyResources(this.rButtonCheckBox, "rButtonCheckBox");
+			this.rButtonCheckBox.Name = "rButtonCheckBox";
+			this.rButtonCheckBox.UseVisualStyleBackColor = true;
+			this.rButtonCheckBox.Click += new System.EventHandler(this.rButtonCheckBox_Click);
 			// 
 			// dpadGroupBox
 			// 
@@ -527,6 +545,8 @@
 		private System.Windows.Forms.TableLayoutPanel cstickTableLayout;
 		private System.Windows.Forms.TableLayoutPanel pairTableLayout;
 		private System.Windows.Forms.CheckBox startButtonCheckBox;
+		private System.Windows.Forms.CheckBox lButtonCheckBox;
+		private System.Windows.Forms.CheckBox rButtonCheckBox;
 	}
 }
 

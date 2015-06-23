@@ -118,12 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 20</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>ファイル</value>
-  </data>
   <data name="openDTMMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 22</value>
   </data>
@@ -151,8 +145,11 @@
   <data name="exitMenuItem.Text" xml:space="preserve">
     <value>終了</value>
   </data>
-  <data name="buttonGroupBox.Text" xml:space="preserve">
-    <value>ボタン</value>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 20</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>ファイル</value>
   </data>
   <data name="startButtonCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 17</value>
@@ -175,8 +172,14 @@
   <data name="zButtonCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>226, 3</value>
   </data>
-  <data name="dpadGroupBox.Text" xml:space="preserve">
-    <value>十字キー</value>
+  <data name="lButtonCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 3</value>
+  </data>
+  <data name="rButtonCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 26</value>
+  </data>
+  <data name="buttonGroupBox.Text" xml:space="preserve">
+    <value>ボタン</value>
   </data>
   <data name="dpadUpCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 17</value>
@@ -211,8 +214,8 @@
   <data name="dpadRightCheckBox.Text" xml:space="preserve">
     <value>右</value>
   </data>
-  <data name="mainStickGroupBox.Text" xml:space="preserve">
-    <value>コントロールスティック</value>
+  <data name="dpadGroupBox.Text" xml:space="preserve">
+    <value>十字キー</value>
   </data>
   <data name="mainStickYAxisLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 13</value>
@@ -226,8 +229,8 @@
   <data name="mainStickXAxisLabel.Text" xml:space="preserve">
     <value>X軸:</value>
   </data>
-  <data name="cstickGroupBox.Text" xml:space="preserve">
-    <value>Cスティック</value>
+  <data name="mainStickGroupBox.Text" xml:space="preserve">
+    <value>コントロールスティック</value>
   </data>
   <data name="cstickYAxisLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 13</value>
@@ -240,6 +243,9 @@
   </data>
   <data name="cstickXAxisLabel.Text" xml:space="preserve">
     <value>X軸:</value>
+  </data>
+  <data name="cstickGroupBox.Text" xml:space="preserve">
+    <value>Cスティック</value>
   </data>
   <data name="triggerGroupBox.Text" xml:space="preserve">
     <value>トリガー</value>

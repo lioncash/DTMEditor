@@ -14,6 +14,8 @@ namespace DTMEditor.FileHandling.ControllerData
 		DPadUp    = (1 << 6),
 		DPadDown  = (1 << 7),
 		DPadLeft  = (1 << 8),
-		DPadRight = (1 << 9)
+		DPadRight = (1 << 9),
+		L         = (1 << 10),
+		R         = (1 << 11)
 	}
 }

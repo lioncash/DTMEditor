@@ -208,6 +208,16 @@ namespace DTMEditor
 			ValidateButton(GameCubeButton.DPadRight, dpadRightCheckBox);
 		}
 
+		private void lButtonCheckBox_Click(object sender, EventArgs e)
+		{
+			ValidateButton(GameCubeButton.L, lButtonCheckBox);
+		}
+
+		private void rButtonCheckBox_Click(object sender, EventArgs e)
+		{
+			ValidateButton(GameCubeButton.R, rButtonCheckBox);
+		}
+
 		#endregion
 
 		#region Axis Handling
