@@ -135,6 +135,8 @@ namespace DTMEditor
 				xButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.X);
 				yButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.Y);
 				zButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.Z);
+				lButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.L);
+				rButtonCheckBox.Checked   = data.IsButtonPressed(GameCubeButton.R);
 				dpadUpCheckBox.Checked    = data.IsButtonPressed(GameCubeButton.DPadUp);
 				dpadDownCheckBox.Checked  = data.IsButtonPressed(GameCubeButton.DPadDown);
 				dpadLeftCheckBox.Checked  = data.IsButtonPressed(GameCubeButton.DPadLeft);
