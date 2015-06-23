@@ -213,11 +213,21 @@ namespace DTMEditor
 		private void lButtonCheckBox_Click(object sender, EventArgs e)
 		{
 			ValidateButton(GameCubeButton.L, lButtonCheckBox);
+
+			if (lButtonCheckBox.Checked)
+				leftTriggerUpDown.Value = 255;
+			else
+				leftTriggerUpDown.Value = 0;
 		}
 
 		private void rButtonCheckBox_Click(object sender, EventArgs e)
 		{
 			ValidateButton(GameCubeButton.R, rButtonCheckBox);
+
+			if (rButtonCheckBox.Checked)
+				rightTriggerUpDown.Value = 255;
+			else
+				rightTriggerUpDown.Value = 0;
 		}
 
 		#endregion

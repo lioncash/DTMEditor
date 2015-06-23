@@ -122,13 +122,13 @@
 		public void ModifyAxis(GameCubeAxis axis, int value)
 		{
 			if (axis == GameCubeAxis.AnalogXAxis)
-				Data = (Data & ~0x000000FF000000UL) | ((ulong) value << 32);
+				Data = (Data & ~0x000000FF00000000UL) | ((ulong) value << 32);
 			else if (axis == GameCubeAxis.AnalogYAxis)
-				Data = (Data & ~0x0000FF00000000UL) | ((ulong) value << 40);
+				Data = (Data & ~0x0000FF0000000000UL) | ((ulong) value << 40);
 			else if (axis == GameCubeAxis.CStickXAxis)
-				Data = (Data & ~0x00FF0000000000UL) | ((ulong) value << 48);
+				Data = (Data & ~0x00FF000000000000UL) | ((ulong) value << 48);
 			else if (axis == GameCubeAxis.CStickYAxis)
-				Data = (Data & ~0xFF000000000000UL) | ((ulong) value << 56);
+				Data = (Data & ~0xFF00000000000000UL) | ((ulong) value << 56);
 		}
 
 		#endregion
