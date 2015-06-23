@@ -101,36 +101,17 @@
 				Data &= (ulong) ~button;
 		}
 
+		/// <summary>
+		/// Modifies the data relating to the trigger values.
+		/// </summary>
+		/// <param name="trigger">The trigger to modify the data of.</param>
+		/// <param name="value">The value to set.</param>
 		public void ModifyTrigger(GameCubeTrigger trigger, int value)
 		{
-			// TODO: I think L and R might be consider pressed after a threshold,
-			//       not simply if value is larger than zero.
-			bool pressed = (value > 0);
-
 			if (trigger == GameCubeTrigger.L)
-			{
-				if (pressed)
-				{
-					Data |= (1 << 10);
-					Data |= ((ulong) value << 16);
-				}
-				else
-				{
-					Data &= ~0xFF0400UL;
-				}
-			}
-			else
-			{
-				if (pressed)
-				{
-					Data |= (1 << 11);
-					Data |= ((ulong) value << 24);
-				}
-				else
-				{
-					Data &= ~0xFF000800UL;
-				}
-			}
+				Data = (Data & ~0xFF0000UL) | ((ulong) value << 16);
+			else if (trigger == GameCubeTrigger.R)
+				Data = (Data & ~0xFF000000UL) | ((ulong)value << 24);
 		}
 
 		/// <summary>
