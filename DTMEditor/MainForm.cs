@@ -153,7 +153,7 @@ namespace DTMEditor
 
 		#endregion
 
-		#region DTM Edition Functionality
+		#region DTM Editing Functionality
 
 		#region Button Handling
 
