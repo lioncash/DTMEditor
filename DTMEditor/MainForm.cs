@@ -11,10 +11,16 @@ namespace DTMEditor
 	{
 		private DTM openedDtm;
 
+		#region Constructor
+
 		public MainForm()
 		{
 			InitializeComponent();
 		}
+
+		#endregion
+
+		#region MenuStrip Handling
 
 		private void openDTMMenuItem_Click(object sender, EventArgs e)
 		{
@@ -47,6 +53,54 @@ namespace DTMEditor
 
 			ofd.Dispose();
 		}
+
+		private void saveMenuItem_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				openedDtm.Save(openedDtm.FilePath);
+			}
+			catch (FileNotFoundException)
+			{
+				// If the original file cannot be found. Allow the user to save it manually.
+				saveAsMenuItem_Click(sender, e);
+			}
+			catch (IOException ioe)
+			{
+				// Not much we can do in this case. Better than crashing and burning though.
+				MessageBox.Show(ioe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void saveAsMenuItem_Click(object sender, EventArgs e)
+		{
+			var sfd = new SaveFileDialog();
+			sfd.Filter = "Dolphin Movie File (*.dtm)|*.dtm";
+
+			if (sfd.ShowDialog() == DialogResult.OK)
+			{
+				try
+				{
+					openedDtm.Save(sfd.FileName);
+				}
+				catch (IOException ioe)
+				{
+					// Not much else we can do in this case.
+					MessageBox.Show(ioe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+			}
+
+			sfd.Dispose();
+		}
+
+		private void exitMenuItem_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+
+		#endregion
+
+		#region Frame ListBox Selection Handling
 
 		private void frameListBox_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -101,49 +155,7 @@ namespace DTMEditor
 			}
 		}
 
-		private void saveMenuItem_Click(object sender, EventArgs e)
-		{
-			try
-			{
-				openedDtm.Save(openedDtm.FilePath);
-			}
-			catch (FileNotFoundException)
-			{
-				// If the original file cannot be found. Allow the user to save it manually.
-				saveAsMenuItem_Click(sender, e);
-			}
-			catch (IOException ioe)
-			{
-				// Not much we can do in this case. Better than crashing and burning though.
-				MessageBox.Show(ioe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-		}
-
-		private void saveAsMenuItem_Click(object sender, EventArgs e)
-		{
-			var sfd = new SaveFileDialog();
-			sfd.Filter = "Dolphin Movie File (*.dtm)|*.dtm";
-
-			if (sfd.ShowDialog() == DialogResult.OK)
-			{
-				try
-				{
-					openedDtm.Save(sfd.FileName);
-				}
-				catch (IOException ioe)
-				{
-					// Not much else we can do in this case.
-					MessageBox.Show(ioe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				}
-			}
-
-			sfd.Dispose();
-		}
-
-		private void exitMenuItem_Click(object sender, EventArgs e)
-		{
-			Application.Exit();
-		}
+		#endregion
 
 		#region DTM Edition Functionality
 
@@ -241,7 +253,7 @@ namespace DTMEditor
 
 		#endregion
 
-		#region Private Helpers
+		#region Private Helper Methods
 
 		private void ValidateButton(GameCubeButton button, CheckBox checkbox)
 		{
